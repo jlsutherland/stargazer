@@ -3635,16 +3635,16 @@ function(libname, pkgname) {
 
   	# notes
   	else if (part=="notes") {
-  		if (.format.note != "") { cat(.format.note) }
-  		for (i in seq(1:length(.format.note.content))) {
+  	## 	if (.format.note != "") { cat(.format.note) }
+  	## 	for (i in seq(1:length(.format.note.content))) {
 
-  		  .format.note.content[i] <- .format.note.content[i]
+  	## 	  .format.note.content[i] <- .format.note.content[i]
 
-        # print individual notes
-  			if (.format.note == "") { cat("\\multicolumn{",length(.global.models)+1,"}{",.format.note.alignment,"}{",.format.note.content[i],"} \\\\ \n", sep="") }
-  			else { cat(" & \\multicolumn{",length(.global.models),"}{",.format.note.alignment,"}{",.format.note.content[i],"} \\\\ \n", sep="") }
-  		}
-  		.table.part.published[which.part.number] <<- TRUE
+        ## # print individual notes
+  	## 		if (.format.note == "") { cat("\\multicolumn{",length(.global.models)+1,"}{",.format.note.alignment,"}{",.format.note.content[i],"} \\\\ \n", sep="") }
+  	## 		else { cat(" & \\multicolumn{",length(.global.models),"}{",.format.note.alignment,"}{",.format.note.content[i],"} \\\\ \n", sep="") }
+  	## 	}
+  	## 	.table.part.published[which.part.number] <<- TRUE
   	}
 
   	# empty line
